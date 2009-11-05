@@ -1,0 +1,24 @@
+{
+   "resources" : {
+      "repository" : "http://github.com/rjbs/moosex-storage-format-jsonpm"
+   },
+   "meta-spec" : {
+      "version" : 1.4,
+      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
+   },
+   "generated_by" : "Dist::Zilla version 1.092990",
+   "version" : "0.093090",
+   "name" : "MooseX-Storage-Format-JSONpm",
+   "author" : [
+      "Ricardo SIGNES <rjbs@cpan.org>"
+   ],
+   "license" : "perl",
+   "requires" : {
+      "namespace::autoclean" : "0",
+      "MooseX::Storage" : "0",
+      "MooseX::Role::Parameterized" : "0",
+      "JSON" : "2"
+   },
+   "abstract" : "a format role for MooseX::Storage using JSON.pm"
+}
+
