@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution MooseX-Storage-Format-JSONpm, version
-0.093090:
+0.093091:
 
   a format role for MooseX::Storage using JSON.pm
 

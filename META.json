@@ -7,7 +7,7 @@
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
    "generated_by" : "Dist::Zilla version 1.092990",
-   "version" : "0.093090",
+   "version" : "0.093091",
    "name" : "MooseX-Storage-Format-JSONpm",
    "author" : [
       "Ricardo SIGNES <rjbs@cpan.org>"

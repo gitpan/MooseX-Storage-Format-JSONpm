@@ -9,7 +9,7 @@ WriteMakefile(
   NAME      => 'MooseX::Storage::Format::JSONpm',
   AUTHOR    => "Ricardo\ SIGNES\ \<rjbs\@cpan\.org\>",
   ABSTRACT  => "a\ format\ role\ for\ MooseX\:\:Storage\ using\ JSON\.pm",
-  VERSION   => '0.093090',
+  VERSION   => '0.093091',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {

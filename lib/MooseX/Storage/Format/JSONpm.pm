@@ -1,5 +1,5 @@
 package MooseX::Storage::Format::JSONpm;
-our $VERSION = '0.093090';
+our $VERSION = '0.093091';
 
 
 use MooseX::Role::Parameterized;
@@ -12,7 +12,13 @@ use JSON;
 
 parameter json_opts => (
   isa => 'HashRef',
-  default => sub { return { ascii => 1 } },
+  default => sub { return { } },
+  initializer => sub {
+    my ($self, $value, $set) = @_;
+
+    %$value = (ascii => 1, %$value);
+    $set->($value);
+  }
 );
 
 role {
@@ -50,12 +56,12 @@ MooseX::Storage::Format::JSONpm - a format role for MooseX::Storage using JSON.p
 
 =head1 VERSION
 
-version 0.093090
+version 0.093091
 
 =head1 SYNOPSIS
 
   package Point;
-our $VERSION = '0.093090';
+our $VERSION = '0.093091';
 
 
   use Moose;
@@ -75,6 +81,25 @@ our $VERSION = '0.093090';
 
   # unpack the JSON string into an object
   my $p2 = Point->thaw($json);
+
+...in other words, it can be used as a drop-in replacement for
+MooseX::Storage::Format::JSON.  However, it can also be parameterized:
+
+  package Point;
+our $VERSION = '0.093091';
+
+
+  use Moose;
+  use MooseX::Storage;
+
+  with Storage(format => [ JSONpm => { json_opts => { pretty => 1 } } ]);
+
+At present, C<json_opts> is the only parameter, and is used when calling the
+C<to_json> and C<from_json> routines provided by the L<JSON|JSON> library.
+Default values are merged into the given hashref (with explict values taking
+priority).  The defaults are as follows:
+
+  { ascii => 1 }
 
 =head1 METHODS
 
