@@ -1,7 +1,7 @@
 package MooseX::Storage::Format::JSONpm;
-our $VERSION = '0.093091';
-
-
+{
+  $MooseX::Storage::Format::JSONpm::VERSION = '0.093092';
+}
 use MooseX::Role::Parameterized;
 # ABSTRACT: a format role for MooseX::Storage using JSON.pm
 
@@ -56,14 +56,11 @@ MooseX::Storage::Format::JSONpm - a format role for MooseX::Storage using JSON.p
 
 =head1 VERSION
 
-version 0.093091
+version 0.093092
 
 =head1 SYNOPSIS
 
   package Point;
-our $VERSION = '0.093091';
-
-
   use Moose;
   use MooseX::Storage;
 
@@ -86,9 +83,6 @@ our $VERSION = '0.093091';
 MooseX::Storage::Format::JSON.  However, it can also be parameterized:
 
   package Point;
-our $VERSION = '0.093091';
-
-
   use Moose;
   use MooseX::Storage;
 
@@ -118,11 +112,11 @@ this code -- from MooseX::Storage::Format::JSON.
 
 =head1 AUTHOR
 
-  Ricardo SIGNES <rjbs@cpan.org>
+Ricardo SIGNES <rjbs@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Ricardo SIGNES.
+This software is copyright (c) 2011 by Ricardo SIGNES.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
